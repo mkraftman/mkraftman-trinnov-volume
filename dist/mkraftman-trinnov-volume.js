@@ -97,7 +97,7 @@ class MkraftmanTrinnovVolume extends HTMLElement {
         .top-row {
           display: flex;
           align-items: center;
-          gap: 8px;
+          gap: 0;
           margin-bottom: 8px;
         }
         .mute-btn {
@@ -134,6 +134,7 @@ class MkraftmanTrinnovVolume extends HTMLElement {
           white-space: nowrap;
           user-select: none;
           min-width: 90px;
+          margin-left: 3px;
         }
         .vol-display.unavailable {
           opacity: 0.4;
@@ -142,6 +143,7 @@ class MkraftmanTrinnovVolume extends HTMLElement {
           flex-shrink: 0;
           display: flex;
           gap: 6px;
+          margin-left: 8px;
         }
         .vol-btn {
           width: 36px;
