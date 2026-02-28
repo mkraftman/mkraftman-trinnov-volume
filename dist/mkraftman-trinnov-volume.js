@@ -89,7 +89,7 @@ class MkraftmanTrinnovVolume extends HTMLElement {
           display: block;
         }
         .card {
-          background: rgba(var(--rgb-blue, 68, 115, 158), 0.15);
+          background: #132532;
           border-radius: 12px;
           padding: 12px;
           box-sizing: border-box;
@@ -102,8 +102,8 @@ class MkraftmanTrinnovVolume extends HTMLElement {
         }
         .mute-btn {
           flex-shrink: 0;
-          width: 42px;
-          height: 42px;
+          width: 56px;
+          height: 56px;
           border-radius: 50%;
           border: none;
           background: rgba(var(--rgb-blue, 68, 115, 158), 0.2);
@@ -123,20 +123,19 @@ class MkraftmanTrinnovVolume extends HTMLElement {
           color: var(--error-color, #db4437);
         }
         .mute-btn ha-icon {
-          --mdi-icon-size: 24px;
-          width: 24px;
-          height: 24px;
+          --mdi-icon-size: 32px;
+          width: 32px;
+          height: 32px;
         }
         .vol-display {
-          flex: 1;
-          text-align: center;
-          font-size: 14px;
+          flex-shrink: 0;
+          text-align: right;
+          font-size: 18px;
           font-weight: 500;
           color: var(--primary-text-color, #fff);
           white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
           user-select: none;
+          min-width: 90px;
         }
         .vol-display.unavailable {
           opacity: 0.4;
@@ -158,6 +157,8 @@ class MkraftmanTrinnovVolume extends HTMLElement {
           align-items: center;
           justify-content: center;
           padding: 0;
+          margin: 0;
+          line-height: 0;
           transition: background 0.15s;
           -webkit-tap-highlight-color: transparent;
         }
@@ -168,6 +169,8 @@ class MkraftmanTrinnovVolume extends HTMLElement {
           --mdi-icon-size: 20px;
           width: 20px;
           height: 20px;
+          display: block;
+          margin: 0 auto;
         }
         .vol-btn:disabled,
         .mute-btn:disabled {
@@ -184,14 +187,14 @@ class MkraftmanTrinnovVolume extends HTMLElement {
           appearance: none;
           width: 100%;
           height: 42px;
-          border-radius: 21px;
+          border-radius: 8px;
           outline: none;
           background: linear-gradient(
             to right,
-            rgba(var(--rgb-blue, 68, 115, 158), 0.5) 0%,
-            rgba(var(--rgb-blue, 68, 115, 158), 0.5) var(--fill-pct, 0%),
-            rgba(var(--rgb-blue, 68, 115, 158), 0.2) var(--fill-pct, 0%),
-            rgba(var(--rgb-blue, 68, 115, 158), 0.2) 100%
+            #009AC7 0%,
+            #009AC7 var(--fill-pct, 0%),
+            #0F3C5A var(--fill-pct, 0%),
+            #0F3C5A 100%
           );
           cursor: pointer;
           margin: 0;
@@ -207,10 +210,10 @@ class MkraftmanTrinnovVolume extends HTMLElement {
         input[type="range"]::-webkit-slider-thumb {
           -webkit-appearance: none;
           appearance: none;
-          width: 8px;
-          height: 32px;
+          width: 16px;
+          height: 42px;
           border-radius: 4px;
-          background: rgba(var(--rgb-blue, 68, 115, 158), 0.8);
+          background: #FFFFFF;
           border: none;
           cursor: pointer;
         }
@@ -221,22 +224,22 @@ class MkraftmanTrinnovVolume extends HTMLElement {
         /* Firefox track */
         input[type="range"]::-moz-range-track {
           height: 42px;
-          border-radius: 21px;
+          border-radius: 8px;
           background: transparent;
           border: none;
         }
         /* Firefox progress (filled portion) */
         input[type="range"]::-moz-range-progress {
           height: 42px;
-          border-radius: 21px 0 0 21px;
-          background: rgba(var(--rgb-blue, 68, 115, 158), 0.5);
+          border-radius: 8px 0 0 8px;
+          background: #009AC7;
         }
         /* Firefox thumb */
         input[type="range"]::-moz-range-thumb {
-          width: 8px;
-          height: 32px;
+          width: 16px;
+          height: 42px;
           border-radius: 4px;
-          background: rgba(var(--rgb-blue, 68, 115, 158), 0.8);
+          background: #FFFFFF;
           border: none;
           cursor: pointer;
         }
@@ -250,7 +253,7 @@ class MkraftmanTrinnovVolume extends HTMLElement {
           <button class="mute-btn" id="muteBtn">
             <ha-icon icon="mdi:volume-high"></ha-icon>
           </button>
-          <div class="vol-display" id="volDisplay">—</div>
+          <div style="flex:1"></div>
           <div class="vol-btns">
             <button class="vol-btn" id="volDown">
               <ha-icon icon="mdi:minus"></ha-icon>
@@ -259,6 +262,7 @@ class MkraftmanTrinnovVolume extends HTMLElement {
               <ha-icon icon="mdi:plus"></ha-icon>
             </button>
           </div>
+          <div class="vol-display" id="volDisplay">—</div>
         </div>
         <div class="slider-row">
           <input type="range" id="slider" min="-120" max="0" step="0.5" value="-120" />
