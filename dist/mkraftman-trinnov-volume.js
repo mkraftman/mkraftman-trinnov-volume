@@ -133,7 +133,7 @@ class MkraftmanTrinnovVolume extends HTMLElement {
           color: var(--primary-text-color, #fff);
           white-space: nowrap;
           user-select: none;
-          margin-left: 3px;
+          margin-left: 10px;
         }
         .vol-display.unavailable {
           opacity: 0.4;
