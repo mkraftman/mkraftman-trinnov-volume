@@ -127,13 +127,12 @@ class MkraftmanTrinnovVolume extends HTMLElement {
         }
         .vol-display {
           flex-shrink: 0;
-          text-align: right;
+          text-align: left;
           font-size: 18px;
           font-weight: 500;
           color: var(--primary-text-color, #fff);
           white-space: nowrap;
           user-select: none;
-          min-width: 90px;
           margin-left: 3px;
         }
         .vol-display.unavailable {
