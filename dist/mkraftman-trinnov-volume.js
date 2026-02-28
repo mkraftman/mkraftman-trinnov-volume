@@ -123,9 +123,10 @@ class MkraftmanTrinnovVolume extends HTMLElement {
           color: var(--error-color, #db4437);
         }
         .mute-btn ha-icon {
-          --mdi-icon-size: 56px;
-          width: 56px;
-          height: 56px;
+          --mdi-icon-size: 40px;
+          width: 40px;
+          height: 40px;
+          display: block;
         }
         .vol-display {
           flex-shrink: 0;
