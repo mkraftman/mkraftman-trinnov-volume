@@ -123,10 +123,7 @@ class MkraftmanTrinnovVolume extends HTMLElement {
           color: var(--error-color, #db4437);
         }
         .mute-btn ha-icon {
-          --mdi-icon-size: 40px;
-          width: 40px;
-          height: 40px;
-          display: block;
+          transform: scale(1.7);
         }
         .vol-display {
           flex-shrink: 0;
@@ -159,19 +156,14 @@ class MkraftmanTrinnovVolume extends HTMLElement {
           justify-content: center;
           padding: 0;
           margin: 0;
-          line-height: 0;
+          font-size: 22px;
+          font-weight: 300;
+          line-height: 1;
           transition: background 0.15s;
           -webkit-tap-highlight-color: transparent;
         }
         .vol-btn:active {
           background: rgba(var(--rgb-blue, 68, 115, 158), 0.35);
-        }
-        .vol-btn ha-icon {
-          --mdi-icon-size: 20px;
-          width: 20px;
-          height: 20px;
-          display: block;
-          margin: 0 auto;
         }
         .vol-btn:disabled,
         .mute-btn:disabled {
@@ -257,12 +249,8 @@ class MkraftmanTrinnovVolume extends HTMLElement {
           <div style="flex:1"></div>
           <div class="vol-display" id="volDisplay">—</div>
           <div class="vol-btns">
-            <button class="vol-btn" id="volDown">
-              <ha-icon icon="mdi:minus"></ha-icon>
-            </button>
-            <button class="vol-btn" id="volUp">
-              <ha-icon icon="mdi:plus"></ha-icon>
-            </button>
+            <button class="vol-btn" id="volDown">&minus;</button>
+            <button class="vol-btn" id="volUp">&plus;</button>
           </div>
         </div>
         <div class="slider-row">
