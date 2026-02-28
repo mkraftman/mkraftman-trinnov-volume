@@ -156,8 +156,8 @@ class MkraftmanTrinnovVolume extends HTMLElement {
           justify-content: center;
           padding: 0;
           margin: 0;
-          font-size: 22px;
-          font-weight: 300;
+          font-size: 29px;
+          font-weight: 700;
           line-height: 1;
           transition: background 0.15s;
           -webkit-tap-highlight-color: transparent;
@@ -246,8 +246,8 @@ class MkraftmanTrinnovVolume extends HTMLElement {
           <button class="mute-btn" id="muteBtn">
             <ha-icon icon="mdi:volume-high"></ha-icon>
           </button>
-          <div style="flex:1"></div>
           <div class="vol-display" id="volDisplay">—</div>
+          <div style="flex:1"></div>
           <div class="vol-btns">
             <button class="vol-btn" id="volDown">&minus;</button>
             <button class="vol-btn" id="volUp">&plus;</button>
