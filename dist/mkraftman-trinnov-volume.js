@@ -123,9 +123,9 @@ class MkraftmanTrinnovVolume extends HTMLElement {
           color: var(--error-color, #db4437);
         }
         .mute-btn ha-icon {
-          --mdi-icon-size: 32px;
-          width: 32px;
-          height: 32px;
+          --mdi-icon-size: 56px;
+          width: 56px;
+          height: 56px;
         }
         .vol-display {
           flex-shrink: 0;
@@ -254,6 +254,7 @@ class MkraftmanTrinnovVolume extends HTMLElement {
             <ha-icon icon="mdi:volume-high"></ha-icon>
           </button>
           <div style="flex:1"></div>
+          <div class="vol-display" id="volDisplay">—</div>
           <div class="vol-btns">
             <button class="vol-btn" id="volDown">
               <ha-icon icon="mdi:minus"></ha-icon>
@@ -262,7 +263,6 @@ class MkraftmanTrinnovVolume extends HTMLElement {
               <ha-icon icon="mdi:plus"></ha-icon>
             </button>
           </div>
-          <div class="vol-display" id="volDisplay">—</div>
         </div>
         <div class="slider-row">
           <input type="range" id="slider" min="-120" max="0" step="0.5" value="-120" />
