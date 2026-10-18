@@ -50,3 +50,7 @@ remote_entity: remote.trinnov_altitude_14681209
 [Mute Icon]  -30.0 dB            [Vol-] [Vol+]
 [============= SLIDER (full width) =============]
 ```
+
+## Releasing
+
+Bump the version in `VERSION` (e.g. `1.0.1`) and push to `main`. The release workflow creates the matching `vX.Y.Z` tag and GitHub release with `dist/mkraftman-trinnov-volume.js` attached. Pushing a `vX.Y.Z` tag directly also still works.
