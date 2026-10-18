@@ -1,6 +1,6 @@
 # Mkraftman Trinnov Volume
 
-Custom Home Assistant Lovelace card for controlling Trinnov Altitude volume. Features a pill-shaped slider with mute toggle and volume +/- buttons.
+Custom Home Assistant Lovelace card for controlling Trinnov Altitude volume. Visual twin of [Mkraftman Samsung Volume](https://github.com/mkraftman/mkraftman-samsung-volume). Features a pill-shaped slider with mute toggle and volume +/- buttons.
 
 ## Features
 
