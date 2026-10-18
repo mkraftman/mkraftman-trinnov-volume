@@ -1,0 +1,29 @@
+name: Bootstrap v1.0.10 release (one-off)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/bootstrap-release.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: 12539e7e276282516ef4c9cbaea143b0f0574c9e
+
+      - name: Create v1.0.10 tag and release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.0.10
+          target_commitish: 12539e7e276282516ef4c9cbaea143b0f0574c9e
+          name: v1.0.10
+          files: dist/mkraftman-trinnov-volume.js
+          generate_release_notes: true
